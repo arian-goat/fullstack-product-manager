@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+doctest-output.txt
+.project
+.idea/
+*.iml
+*.ipr
+*.iws
+products.db  # اضافه کردن فایل دیتابیس SQLite محلی
+.DS_Store  # برای کاربران مک
