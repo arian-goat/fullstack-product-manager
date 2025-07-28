@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت محصولات آرین</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>سیستم مدیریت محصولات آنلاین</h1>
+        <p class="developer-info">توسط: آرین رحیمی</p>
+
+        <div class="form-section">
+            <div class="search-section">
+        <h2>جستجو در محصولات</h2>
+        <div class="form-group">
+            <input type="text" id="searchQuery" placeholder="نام یا توضیحات محصول را جستجو کنید...">
+            <button id="searchButton" type="button">جستجو</button>
+            <button id="clearSearchButton" type="button" class="clear-button" style="display: none;">پاک کردن جستجو</button>
+        </div>
+    </div>
+            <h2>افزودن محصول جدید</h2>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="productName">نام محصول:</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">توضیحات:</label>
+                    <textarea id="productDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">قیمت:</label>
+                    <input type="number" id="productPrice" step="0.01" min="0" required>
+                </div>
+                <button type="submit">افزودن محصول</button>
+            </form>
+            <div id="formMessage" class="message"></div>
+        </div>
+
+        <div class="product-list-section">
+            <h2>لیست محصولات</h2>
+            <div id="productsContainer" class="products-grid">
+                <p class="loading-message">در حال بارگذاری محصولات...</p>
+            </div>
+            <div id="listMessage" class="message"></div>
+        </div>
+    </div>
+<div id="editProductModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>ویرایش محصول</h2>
+        <form id="editProductForm">
+            <input type="hidden" id="editProductId"> <div class="form-group">
+                <label for="editProductName">نام محصول:</label>
+                <input type="text" id="editProductName" required>
+            </div>
+            <div class="form-group">
+                <label for="editProductDescription">توضیحات:</label>
+                <textarea id="editProductDescription" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="editProductPrice">قیمت:</label>
+                <input type="number" id="editProductPrice" step="0.01" min="0" required>
+            </div>
+            <button type="submit">ذخیره تغییرات</button>
+        </form>
+        <div id="editFormMessage" class="message"></div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

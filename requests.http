@@ -1,0 +1,49 @@
+### Test GET all products
+GET http://127.0.0.1:5000/products
+Accept: application/json
+
+### Test POST a new product
+POST http://127.0.0.1:5000/products
+Content-Type: application/json
+
+{
+    "name": "لپ‌تاپ جدید آرین",
+    "description": "یک لپ‌تاپ قدرتمند برای برنامه‌نویسی",
+    "price": 1200.50
+}
+
+### Test POST another product
+POST http://127.0.0.1:5000/products
+Content-Type: application/json
+
+{
+    "name": "موس بی‌سیم آرین",
+    "description": "موس ارگونومیک و سبک",
+    "price": 25.00
+}
+
+### Test POST product with missing data (will fail)
+# POST http://127.0.0.1:5000/products
+# Content-Type: application/json
+
+# {
+#     "name": "کیبورد مکانیکی"
+# }
+
+### Test POST product with invalid price (will fail)
+# POST http://127.0.0.1:5000/products
+# Content-Type: application/json
+
+# {
+#     "name": "مانیتور گیمینگ",
+#     "price": "صد دلار"
+# }
+
+### Test POST duplicate product (will fail)
+# POST http://127.0.0.1:5000/products
+# Content-Type: application/json
+
+# {
+#     "name": "لپ‌تاپ جدید آرین",
+#     "price": 1300
+# }
